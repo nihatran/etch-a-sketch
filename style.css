@@ -6,6 +6,7 @@ body {
     flex-direction: column;
     height: 100vh;
     margin: 0;
+    background-color: rgb(237, 240, 245);
     font-family: 'Roboto Mono', monospace;
 }
 
@@ -18,23 +19,65 @@ h1 {
     display: flex;
     justify-content: center;
     align-items: center;
+    gap: 50px;
+    height: 650px;
+}
 
-    border: 2px solid blue;
+.all-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    width: 300px;
+    height: 500px;
+}
+
+.size-buttons, .color-buttons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    width: 150px;
+    height: 500px;
+}
+
+.size-buttons > button, .color-buttons > button {
+    padding: 10px;
+    background-color: #FFF;
+    font-size: 22px;
+    font-weight: bold;
+    font-family: 'Roboto Mono', monospace;
 }
 
 .container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    width: 515px;
-    height: 510px;
-    
-    border: 2px solid red;
+    display: inline-grid;
+    grid-gap: 1px;
+    width: 550px;
+    height: 550px;
+    border: 2px solid black;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.row, .column {
-    width: 30px;
-    height: 30px;
-    background-color: lightgray;
-    border: 0.5px solid gray;
+.square {
+    background-color: #FFF;
 }
+
+.grid-16x16 {
+    grid-template-columns: repeat(16, 1fr);
+}
+
+.grid-32x32 {
+    grid-template-columns: repeat(32, 1fr);
+}
+
+.grid-64x64 {
+    grid-template-columns: repeat(64, 1fr);
+}
+
+.grid-16x16 > div, .grid-32x32 > div, .grid-64x65 > div {
+    min-height: fit-content;
+    min-width: fit-content;
+}
+
+
