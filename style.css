@@ -4,6 +4,7 @@
 body {
     display: flex;
     flex-direction: column;
+    flex: 1;
     height: 100vh;
     margin: 0;
     background-color: rgb(237, 240, 245);
@@ -13,6 +14,12 @@ body {
 h1 {
     text-align: center;
     font-size: 50px;
+}
+
+p {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 600;
 }
 
 .content {
@@ -44,10 +51,16 @@ h1 {
 
 .size-buttons > button, .color-buttons > button {
     padding: 10px;
+    border: 1px solid black;
     background-color: #FFF;
     font-size: 22px;
     font-weight: bold;
     font-family: 'Roboto Mono', monospace;
+}
+
+.active-button {
+    color: rgb(40, 123, 190);
+    box-shadow: rgba(40, 123, 190, 0.404) 0px 3px 8px;
 }
 
 .container {
@@ -55,7 +68,6 @@ h1 {
     grid-gap: 1px;
     width: 550px;
     height: 550px;
-    border: 2px solid black;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
@@ -79,5 +91,3 @@ h1 {
     min-height: fit-content;
     min-width: fit-content;
 }
-
-
